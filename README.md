@@ -11,16 +11,16 @@ wordsum's goal is to model story and poetry, so a machine can read and learn sto
   <th>model</th><th>state</th><th>version</th>
  </tr>
  <tr>
-  <th>text model</th><th>released</th><th>0.9.99</th>
+  <th>Text Model</th><th>released</th><th>0.9.99</th>
  </tr>
  <tr>
-  <th>story model</th><th>developing</th><th>0.1.0</th>
+  <th>Story Model</th><th>developing</th><th>0.1.0</th>
  </tr>
  <tr>
-  <th>metaphor model</th><th>contemplating</th><th>0.0.0</th>
+  <th>Metaphor Model</th><th>contemplating</th><th>0.0.0</th>
  </tr>
  <tr>
-  <th>poem model</th><th>contemplating</th><th>0.0.0</th>
+  <th>Poem Model</th><th>contemplating</th><th>0.0.0</th>
  </tr>
 </table>
 
@@ -70,13 +70,78 @@ The text model consist of three nested models. The file state model, the paragra
 </table>
 
 
+#### ParagraphState
 
 
+<table>
+ <tr>
+  <th>component</th><th>type</th><th>purpose</th>
+ </tr>
+ <tr>
+  <th>paragraph</th><th>string</th><th>A string of the entire paragraph.</th>
+ </tr>
+ <tr>
+  <th>wordCount</th><th>integer</th><th>The amount of words in the paragraph.</th>
+ </tr>
+ <tr>
+  <th>order</th><th>integer</th><th>The order of the paragraph in a list of paragraphs.</th>
+ </tr>
+ <tr>
+  <th>sentenceCount</th><th>integer</th><th>The amount of sentences in the paragraph.</th>
+ </tr>
+ <tr>
+  <th>dialog</th><th>boolean</th><th>Is true if dialog exists in the paragraph.</th>
+ </tr>
+ <tr>
+  <th>tense</th><th>list of strings</th><th>The list of tenses found in the paragraph.</th>
+ </tr>
+ <tr>
+  <th>sentenceStates</th><th>list of sentence states</th><th>A list of all the modelled sentence states found in the paragraph.</th>
+ </tr>
+</table>
 
-### Example Output from wordsum-java
+
+#### SentenceState
+
+<table>
+ <tr>
+  <th>component</th><th>type</th><th>purpose</th>
+ </tr>
+ <tr>
+  <th>isCompleteSentence</th><th>boolean</th><th>A boolean to define if the string is actually a sentence state.</th>
+ </tr>
+ <tr>
+  <th>sentence</th><th>string</th><th>The string of the complete sentence and all its punctuation.</th>
+ </tr>
+ <tr>
+  <th>wordCount</th><th>integer</th><th>The amount of words in the sentence.</th>
+ </tr>
+ <tr>
+  <th>orderParagraph</th><th>integer</th><th>Order of sentence in a paragraph with sentences.</th>
+ </tr>
+ <tr>
+  <th>tense</th><th>list of string</th><th>A list of tenses found in the sentence.</th>
+ </tr>
+ <tr>
+  <th>nlpState</th><th>NlpState</th><th>An object contained the NLP output of the sentence.</tr>
+ </tr>
+ <tr>
+  <th>punctuationState</th><th>punctuation state</th><th>An object containing the state of punctuation patterns found in the sentence.</tr>
+ </tr>
+ <tr>
+  <th>spellcheckState</th><th>spellcheck state</th><th>An object defined words in the sentence can't be found in the dictionary and any possible suggestions.</tr>
+ </tr>
+ <tr>
+  <th>DialogState</th><th>dialog state</th><th>A state defined dialog within the sentence.</tr>
+ </tr>
+</table>
+
+#### Example Text Model output from wordsum-java
 
 - **CharacterBuilderTest.txt** Production tested and verified story by placing in the first round of a writing contest, so it is seen by other humans of Pathfinder Chronicler as a complete story: http://pathfinderchronicler.net/baba-yaga-sneak-attack-by-kalab-j-oster/
 
 -  **CharacterBuilderTest.json** wordsum-java output of CharacterBuilderTest.txt and used to verify production date with the wordsum feature for CharacterState and give example of the current revision of the wordsum model.
 
 -  **SubjectVerbsObject.json** example test data for wordsum's character indicator builder for creating Character State of the story model.
+
+
