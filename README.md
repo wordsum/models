@@ -28,6 +28,7 @@ wordsum's goal is to model story and poetry, so a machine can read and learn sto
 
 The text model consist of three nested models. The file state model, the paragraph state model and the sentence state model. As defined following these words, the sentence state is the most discrete model while the paragraph state models paragraphs and consists of sentence states. The file state models contains file data along with paragraph states modelled.
 
+Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
 #### FileState
 <table>
@@ -129,10 +130,10 @@ The text model consist of three nested models. The file state model, the paragra
   <th>punctuationState</th><th>punctuation state</th><th>An object containing the state of punctuation patterns found in the sentence.</tr>
  </tr>
  <tr>
-  <th>spellcheckState</th><th>spellcheck state</th><th>An object defined words in the sentence can't be found in the dictionary and any possible suggestions.</tr>
+  <th>spellcheckState</th><th>spellcheck state</th><th>An object of words in the sentence not found in a dictionary and any possible suggestions of other words.</tr>
  </tr>
  <tr>
-  <th>DialogState</th><th>dialog state</th><th>A state defined dialog within the sentence.</tr>
+  <th>dialogState</th><th>dialog state</th><th>A state defined dialog within the sentence.</tr>
  </tr>
 </table>
 
@@ -143,5 +144,9 @@ The text model consist of three nested models. The file state model, the paragra
 -  **CharacterBuilderTest.json** wordsum-java output of CharacterBuilderTest.txt and used to verify production date with the wordsum feature for CharacterState and give example of the current revision of the wordsum model.
 
 -  **SubjectVerbsObject.json** example test data for wordsum's character indicator builder for creating Character State of the story model.
+
+
+
+
 
 
