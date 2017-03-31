@@ -152,6 +152,20 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
 
 
+## Copyright
 
+  **Open Story License**
+
+  **Story: wordsum-models**
+
+  **Writer: Kalab J. Oster&trade;**
+
+  **Copyright Holders: Kalab J. Oster&trade;**
+
+  **copyright &copy; 2017 Kalab J. Oster&trade;**
+
+  Permission is granted by the Copyright Holders for humans or other intelligent agents to read, write, edit, publish and critique the Story if the humans or intelligent agents keep this Open Story License with the Story, and if the Story remains free, and if another writer writes or edits the Story then the writer's name needs to be appended to the end of the Writer list of this Open Story License.
+
+~
 
 
