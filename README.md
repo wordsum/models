@@ -1,14 +1,13 @@
-# wordsum
+# wordsum-models
 
 wordsum is a model and a tool to create the model. 
 
 wordsum's goal is to model story and poetry, so a machine can read and learn story and poetry.
 .
-
+#### wordsum models
 <table>
- <caption>wordsum models</caption>
  <tr>
-  <th>model</th><th>state</th><th>version</th>
+  <th>Model</th><th>State</th><th>Version</th>
  </tr>
  <tr>
   <th>Text Model</th><th>released</th><th>0.9.99</th>
@@ -26,7 +25,13 @@ wordsum's goal is to model story and poetry, so a machine can read and learn sto
 
 ### Text Model
 
-The text model consist of three nested models. The file state model, the paragraph state model and the sentence state model. As defined following these words, the sentence state is the most discrete model while the paragraph state models paragraphs and consists of sentence states. The file state models contains file data along with paragraph states modelled.
+The Text Model models three states: the FileState, the ParagraphState and the SentenceState.
+
+The FileState contains components to model the file containing the text data. It contains null or many ParagraphStates.
+
+The ParagraphState contains components to model a paragraph. I contains one or many SentenceState states.
+
+The SentenceState contains components to model a sentence.
 
 Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
@@ -66,7 +71,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>wordCount</th><th>integer</th><th>The amount of words in the entire file.</th>
  </tr>
  <tr>
-  <th>paragraphStates</th><th>list of paragraph states</th><th>A list of modelled paragraphs states found in the text file.</th>
+  <th>paragraphStates</th><th>list of ParagraphStates</th><th>A list of ParagraphsStates found in the text file.</th>
  </tr>
 </table>
 
@@ -76,7 +81,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
 <table>
  <tr>
-  <th>component</th><th>type</th><th>purpose</th>
+  <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
   <th>paragraph</th><th>string</th><th>A string of the entire paragraph.</th>
@@ -97,7 +102,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>tense</th><th>list of strings</th><th>The list of tenses found in the paragraph.</th>
  </tr>
  <tr>
-  <th>sentenceStates</th><th>list of sentence states</th><th>A list of all the modelled sentence states found in the paragraph.</th>
+  <th>sentenceStates</th><th>list of SentenceStates</th><th>A list of all the SentenceStates found in the paragraph.</th>
  </tr>
 </table>
 
@@ -106,13 +111,13 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
 <table>
  <tr>
-  <th>component</th><th>type</th><th>purpose</th>
+  <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>isCompleteSentence</th><th>boolean</th><th>A boolean to define if the string is actually a sentence state.</th>
+  <th>isCompleteSentence</th><th>boolean</th><th>A boolean to define if the string is actually a complete sentence and not a fragment.</th>
  </tr>
  <tr>
-  <th>sentence</th><th>string</th><th>The string of the complete sentence and all its punctuation.</th>
+  <th>sentence</th><th>string</th><th>The string of sentences and all its punctuation.</th>
  </tr>
  <tr>
   <th>wordCount</th><th>integer</th><th>The amount of words in the sentence.</th>
@@ -124,13 +129,13 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>tense</th><th>list of string</th><th>A list of tenses found in the sentence.</th>
  </tr>
  <tr>
-  <th>nlpState</th><th>NlpState</th><th>An object contained the NLP output of the sentence.</tr>
+  <th>nlpState</th><th>NlpState</th><th>An object containing the NLP output of the sentence.</tr>
  </tr>
  <tr>
-  <th>punctuationState</th><th>punctuation state</th><th>An object containing the state of punctuation patterns found in the sentence.</tr>
+  <th>punctuationState</th><th>PunctuationState</th><th>An object containing the state of punctuation patterns found in the sentence.</tr>
  </tr>
  <tr>
-  <th>spellcheckState</th><th>spellcheck state</th><th>An object of words in the sentence not found in a dictionary and any possible suggestions of other words.</tr>
+  <th>spellcheckState</th><th>SpellcheckState</th><th>An object for both the words in the sentence not found in a dictionary along with an suggestions of other words.</tr>
  </tr>
  <tr>
   <th>dialogState</th><th>dialog state</th><th>A state defined dialog within the sentence.</tr>
