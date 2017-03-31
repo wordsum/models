@@ -138,7 +138,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>spellcheckState</th><th>SpellcheckState</th><th>An object for both the words in the sentence not found in a dictionary along with an suggestions of other words.</tr>
  </tr>
  <tr>
-  <th>dialogState</th><th>dialog state</th><th>A state defined dialog within the sentence.</tr>
+  <th>dialogState</th><th>DialogState</th><th>A state defining the dialog state within the sentence.</tr>
  </tr>
 </table>
 
