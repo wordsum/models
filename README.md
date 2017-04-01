@@ -142,6 +142,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
  </tr>
 </table>
 
+
 #### Example Text Model output from wordsum-java
 
 - **CharacterBuilderTest.txt** Production tested and verified story by placing in the first round of a writing contest, so it is seen by other humans of Pathfinder Chronicler as a complete story: http://pathfinderchronicler.net/baba-yaga-sneak-attack-by-kalab-j-oster/
@@ -150,6 +151,82 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
 -  **SubjectVerbsObject.json** example test data for wordsum's character indicator builder for creating Character State of the story model.
 
+
+### Story Model
+
+The Story Model depends upon the Text Model to model its states of CharacterState, NarratorState, SettingState and PlotState.
+
+As this model is more meta right now than Alpha,
+
+Currently, only CharacterState is being written. Once the builder to create CharacterState exist then then NarratorState and SettingState will also be nearly complete.
+
+PlotState is still a bit of mystery.
+
+
+
+#### NarrativeState
+
+<table>
+ <tr>
+  <th>Component</th><th>Type</th><th>Purpose</th>
+ </tr>
+ <tr>
+  <th>characterStates</th><th>An ordered list of CharacterStates.</th><th>An ordered list of states that defined the order or actions by a character during a narrative.</th>
+ </tr>
+ <tr>
+  <th>narratorStates</th><th>An ordered list of NarratorStates.</th><th>An ordered list of states that define that narrators of a story whether it be different narrative voice telling the story of the narrator of character dialog.</th>
+ </tr>
+ <tr>
+  <th>settingStates</th><th>An ordered list of SettingStates.</th><th>An ordered list of states that define the settings. </th>
+ </tr>
+ <tr>
+  <th>plotStates</th><th>An ordered list of PlotStates.</th><th>A state of the plots throughout the story given all other states of NarrativeState are known.</th>
+ </tr>
+</table>
+
+#### CharacterState
+
+<table>
+ <tr>
+  <th>Component</th><th>Type</th><th>Purpose</th>
+ </tr>
+ <tr>
+  <th>Defining...</th><th>Defining...</th><th>Defining...</th>
+ </tr>
+</table>
+
+#### NarratorState
+
+<table>
+ <tr>
+  <th>Component</th><th>Type</th><th>Purpose</th>
+ </tr>
+ <tr>
+  <th>Defining...</th><th>Defining...</th><th>Defining...</th>
+ </tr>
+</table>
+
+#### SettingState
+
+<table>
+ <tr>
+  <th>Component</th><th>Type</th><th>Purpose</th>
+ </tr>
+ <tr>
+  <th>Defining...</th><th>Defining...</th><th>Defining...</th>
+ </tr>
+</table>
+
+#### PlotState
+
+<table>
+ <tr>
+  <th>Component</th><th>Type</th><th>Purpose</th>
+ </tr>
+ <tr>
+  <th>Defining...</th><th>Defining...</th><th>Defining...</th>
+ </tr>
+</table>
 
 
 ## Copyright
