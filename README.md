@@ -191,8 +191,11 @@ PlotState is still a bit of mystery.
   <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>Defining...</th><th>Defining...</th><th>Defining...</th>
+  <th>name</th><th>string</th><th>The given or predicted name of the character.</th>
  </tr>
+  <tr>
+   <th>characterIndicators</th><th>A ordered list of character indicators</th><th>This list contains an ordered list of character indicators taken from the subject, verbs and objects of sentences from SentenceState.</th>
+  </tr>
 </table>
 
 #### NarratorState
