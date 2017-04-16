@@ -135,7 +135,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>punctuationState</th><th>PunctuationState</th><th>An object containing the state of punctuation patterns found in the sentence.</tr>
  </tr>
  <tr>
-  <th>spellcheckState</th><th>SpellcheckState</th><th>An object for both the words in the sentence not found in a dictionary along with an suggestions of other words.</tr>
+  <th>spellcheckState</th><th>SpellcheckState</th><th>An object for both the words in the sentence not found in a dictionary and the suggestions of possible intended words found in the dictionary.</tr>
  </tr>
  <tr>
   <th>dialogState</th><th>DialogState</th><th>A state defining the dialog state within the sentence.</tr>
