@@ -41,37 +41,37 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>file</th><th>string</th><th>The absolute path to the digital file containing the text to be modelled.</th>
+  <th>file</th><th>string</th><th>The absolute path to the digital file containing the text state.</th>
  </tr>
  <tr>
   <th>version</th><th>string</th><th>The model's version.</th>
  </tr>
  <tr>
-  <th>sha</th><th>string</th><th>A unique identifier for the outputted modelled text.</th>
+  <th>sha</th><th>string</th><th>A unique identifier for the files state.</th>
  </tr>
  <tr>
-  <th>localDateTime</th><th>string</th><th>The time the modelled text was created.</th>
+  <th>creationTime</th><th>string</th><th>File state creation time</th>
  </tr>
  <tr>
-  <th>copyright</th><th>string</th><th>Any copyright covering the contents of the text model.</th>
+  <th>copyright</th><th>string</th><th>Any copyright covering the text of the file.</th>
  </tr>
  <tr>
-  <th>writers</th><th>list of strings</th><th>A list of agents writing the modelled text in the file.</th>
+  <th>writers</th><th>list of strings</th><th>A list of writers of text of the file.</th>
  </tr>
  <tr>
-  <th>editors</th><th>list of strings</th><th>A list of agents editing the modelled text in the file.</th>
+  <th>editors</th><th>list of strings</th><th>A list of editors of text in the file.</th>
  </tr>
  <tr>
-  <th>publishers</th><th>list of strings</th><th>A list of agents publishing the modelled text.</th>
+  <th>publishers</th><th>list of strings</th><th>A list of publishers of the text in the file.</th>
  </tr>
  <tr>
-  <th>fileText</th><th>string</th><th>The text contents of the file.</th>
+  <th>fileText</th><th>string</th><th>One string of the text in the file.</th>
  </tr>
  <tr>
-  <th>wordCount</th><th>integer</th><th>The amount of words in the entire file.</th>
+  <th>wordCount</th><th>integer</th><th>The amount of words in the text file.</th>
  </tr>
  <tr>
-  <th>paragraphStates</th><th>list of ParagraphStates</th><th>A list of ParagraphsStates found in the text file.</th>
+  <th>paragraphStates</th><th>list of ParagraphStates</th><th>A list of ParagraphStates in the text file.</th>
  </tr>
 </table>
 
@@ -84,25 +84,25 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>paragraph</th><th>string</th><th>A string of the entire paragraph.</th>
+  <th>paragraph</th><th>string</th><th>A string of the paragraph.</th>
  </tr>
  <tr>
   <th>wordCount</th><th>integer</th><th>The amount of words in the paragraph.</th>
  </tr>
  <tr>
-  <th>order</th><th>integer</th><th>The order of the paragraph in a list of paragraphs.</th>
+  <th>order</th><th>integer</th><th>The order of the paragraph in a list of paragraphs in a text file.</th>
  </tr>
  <tr>
   <th>sentenceCount</th><th>integer</th><th>The amount of sentences in the paragraph.</th>
  </tr>
  <tr>
-  <th>dialog</th><th>boolean</th><th>Is true if dialog exists in the paragraph.</th>
+  <th>dialog</th><th>boolean</th><th>A boolean defining if dialog exists in the paragraph.</th>
  </tr>
  <tr>
   <th>tense</th><th>list of strings</th><th>The list of tenses found in the paragraph.</th>
  </tr>
  <tr>
-  <th>sentenceStates</th><th>list of SentenceStates</th><th>A list of all the SentenceStates found in the paragraph.</th>
+  <th>sentenceStates</th><th>list of SentenceStates</th><th>A list of SentenceStates in the paragraph.</th>
  </tr>
 </table>
 
@@ -114,28 +114,28 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>isCompleteSentence</th><th>boolean</th><th>A boolean to define if the string is actually a complete sentence and not a fragment.</th>
+  <th>isCompleteSentence</th><th>boolean</th><th>A boolean to define if complete sentence.</th>
  </tr>
  <tr>
-  <th>sentence</th><th>string</th><th>The string of sentences and all its punctuation.</th>
+  <th>sentence</th><th>string</th><th>The text of the sentence.</th>
  </tr>
  <tr>
   <th>wordCount</th><th>integer</th><th>The amount of words in the sentence.</th>
  </tr>
  <tr>
-  <th>orderParagraph</th><th>integer</th><th>Order of sentence in a paragraph with sentences.</th>
+  <th>orderParagraph</th><th>integer</th><th>The order of the sentence in a paragraph.</th>
  </tr>
  <tr>
   <th>tense</th><th>list of string</th><th>A list of tenses found in the sentence.</th>
  </tr>
  <tr>
-  <th>nlpState</th><th>NlpState</th><th>An object containing the NLP output of the sentence.</tr>
+  <th>nlpState</th><th>NlpState</th><th>A state of the NLP output of the sentence.</tr>
  </tr>
  <tr>
-  <th>punctuationState</th><th>PunctuationState</th><th>An object containing the state of punctuation patterns found in the sentence.</tr>
+  <th>punctuationState</th><th>PunctuationState</th><th>A state containing the state of punctuation patterns found in the sentence.</tr>
  </tr>
  <tr>
-  <th>spellcheckState</th><th>SpellcheckState</th><th>An object for both the words in the sentence not found in a dictionary and the suggestions of possible intended words found in the dictionary.</tr>
+  <th>spellcheckState</th><th>SpellcheckState</th><th>A state for both the words in the sentence not found in a dictionary and the suggestions of possible intended words found in the dictionary.</tr>
  </tr>
  <tr>
   <th>dialogState</th><th>DialogState</th><th>A state defining the dialog state within the sentence.</tr>
