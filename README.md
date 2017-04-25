@@ -56,16 +56,16 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>copyright</th><th>string</th><th>Any copyright covering the text of the file.</th>
  </tr>
  <tr>
-  <th>writers</th><th>list of strings</th><th>A list of writers of text of the file.</th>
+  <th>writers</th><th>list of strings</th><th>A list of writers of the text of the file.</th>
  </tr>
  <tr>
-  <th>editors</th><th>list of strings</th><th>A list of editors of text in the file.</th>
+  <th>editors</th><th>list of strings</th><th>A list of editors of the text in the file.</th>
  </tr>
  <tr>
   <th>publishers</th><th>list of strings</th><th>A list of publishers of the text in the file.</th>
  </tr>
  <tr>
-  <th>fileText</th><th>string</th><th>One string of the text in the file.</th>
+  <th>fileText</th><th>string</th><th>A string of the text in the file.</th>
  </tr>
  <tr>
   <th>wordCount</th><th>integer</th><th>The amount of words in the text file.</th>
@@ -84,13 +84,13 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>Component</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>paragraph</th><th>string</th><th>A string of the paragraph.</th>
+  <th>paragraphText</th><th>string</th><th>A string of the paragraph.</th>
  </tr>
  <tr>
   <th>wordCount</th><th>integer</th><th>The amount of words in the paragraph.</th>
  </tr>
  <tr>
-  <th>order</th><th>integer</th><th>The order of the paragraph in a list of paragraphs in a text file.</th>
+  <th>order</th><th>integer</th><th>The numerical order of the paragraph in a list of paragraphs in a text file.</th>
  </tr>
  <tr>
   <th>sentenceCount</th><th>integer</th><th>The amount of sentences in the paragraph.</th>
@@ -99,7 +99,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>dialog</th><th>boolean</th><th>A boolean defining if dialog exists in the paragraph.</th>
  </tr>
  <tr>
-  <th>tense</th><th>list of strings</th><th>The list of tenses found in the paragraph.</th>
+  <th>tense</th><th>list of strings</th><th>A list of tenses found in the paragraph.</th>
  </tr>
  <tr>
   <th>sentenceStates</th><th>list of SentenceStates</th><th>A list of SentenceStates in the paragraph.</th>
@@ -123,10 +123,10 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>wordCount</th><th>integer</th><th>The amount of words in the sentence.</th>
  </tr>
  <tr>
-  <th>orderParagraph</th><th>integer</th><th>The order of the sentence in a paragraph.</th>
+  <th>order</th><th>integer</th><th>The numerical order of the sentence in a paragraph.</th>
  </tr>
  <tr>
-  <th>tense</th><th>list of string</th><th>A list of tenses found in the sentence.</th>
+  <th>tense</th><th>list of strings</th><th>A list of tenses found in the sentence.</th>
  </tr>
  <tr>
   <th>nlpState</th><th>NlpState</th><th>A state of the NLP output of the sentence.</tr>
@@ -135,7 +135,7 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
   <th>punctuationState</th><th>PunctuationState</th><th>A state containing the state of punctuation patterns found in the sentence.</tr>
  </tr>
  <tr>
-  <th>spellcheckState</th><th>SpellcheckState</th><th>A state for both the words in the sentence not found in a dictionary and the suggestions of possible intended words found in the dictionary.</tr>
+  <th>spellcheckState</th><th>SpellcheckState</th><th>A state for non-dictionary words and their suggestions of possible words.</tr>
  </tr>
  <tr>
   <th>dialogState</th><th>DialogState</th><th>A state defining the dialog state within the sentence.</tr>
