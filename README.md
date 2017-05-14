@@ -2,7 +2,7 @@
 
 wordsum is a model and a tool to create the model. 
 
-wordsum's goal is to model story and poetry, so a machine can read and learn story and poetry.
+wordsum's goal is to model story and poetry for A.I..
 .
 #### wordsum models
 <table>
@@ -25,120 +25,117 @@ wordsum's goal is to model story and poetry, so a machine can read and learn sto
 
 ### Text Model
 
-The Text Model models three states: the FileState, the ParagraphState and the SentenceState.
+The Text Model models three states: the File Model, the Paragraph Model and the Sentence Model.
 
-The FileState contains components to model the file containing the text data. It contains null or many ParagraphStates.
+The File Model models text to model a story to teach A.I..
 
-The ParagraphState contains components to model a paragraph. I contains one or many SentenceState states.
+The Paragraph Model models text of a paragraph to model a story to teach A.I..
 
-The SentenceState contains components to model a sentence.
+The Sentence Model models text of a sentence to model a story to teach A.I..
 
-Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
+https://github.com/wordsum/wordsum-java outputs the Text Model.
 
-#### FileState
+#### File Model
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
+ </tr>
+  <tr>
+   <th>fileText</th><th>string</th><th>fileText of type string is the text of the file.</th>
+  </tr>
+ <tr>
+  <th>writers</th><th>list of strings</th><th>writers of type list of strings is a list of writers of the fileText.</th>
  </tr>
  <tr>
-  <th>file</th><th>string</th><th>The absolute path to the digital file containing the text state.</th>
+  <th>editors</th><th>list of strings</th><th>editors of type list of strings is a list of editors of the fileText.</th>
  </tr>
  <tr>
-  <th>version</th><th>string</th><th>The model's version.</th>
+  <th>publishers</th><th>list of strings</th><th>publishers of type list of strings is a list of publishers of the fileText.</th>
  </tr>
+  <tr>
+   <th>copyright</th><th>string</th><th>copyright of type string is any copyright of the fileText.</th>
+  </tr>
  <tr>
-  <th>sha</th><th>string</th><th>A unique identifier for the files state.</th>
+  <th>wordCount</th><th>integer</th><th>wordCount of type integer is the amount of words of the fileText.</th>
  </tr>
+  <tr>
+   <th>file</th><th>string</th><th>file of type string is the absolute path to the digital file of the fileText.</th>
+  </tr>
+   <tr>
+    <th>version</th><th>string</th><th>version of type string is the version of the File Model.</th>
+   </tr>
+  <tr>
+   <th>guid</th><th>string</th><th>guid of type string is a globally unique identifier for the File Model state.</th>
+  </tr>
+  <tr>
+   <th>creationTime</th><th>string</th><th>creationTime of type string is the creation time of thee File Model state.</th>
+  </tr>
  <tr>
-  <th>creationTime</th><th>string</th><th>File state creation time</th>
- </tr>
- <tr>
-  <th>copyright</th><th>string</th><th>Any copyright covering the text of the file.</th>
- </tr>
- <tr>
-  <th>writers</th><th>list of strings</th><th>A list of writers of the text of the file.</th>
- </tr>
- <tr>
-  <th>editors</th><th>list of strings</th><th>A list of editors of the text in the file.</th>
- </tr>
- <tr>
-  <th>publishers</th><th>list of strings</th><th>A list of publishers of the text in the file.</th>
- </tr>
- <tr>
-  <th>fileText</th><th>string</th><th>A string of the text in the file.</th>
- </tr>
- <tr>
-  <th>wordCount</th><th>integer</th><th>The amount of words in the text file.</th>
- </tr>
- <tr>
-  <th>paragraphStates</th><th>list of ParagraphStates</th><th>A list of ParagraphStates in the text file.</th>
+  <th>paragraphStates</th><th>list of ParagraphStates</th><th>paragraphStates of type list of ParagraphStates is a list of Paragraph Model states of the File Model state</th>
  </tr>
 </table>
 
 
-#### ParagraphState
-
+#### Paragraph Model
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>paragraphText</th><th>string</th><th>A string of the paragraph.</th>
+  <th>paragraphText</th><th>string</th><th>paragraphText of type string is the text of the paragraph.</th>
  </tr>
  <tr>
-  <th>wordCount</th><th>integer</th><th>The amount of words in the paragraph.</th>
+  <th>order</th><th>integer</th><th>order of type integer is the ordinal placement of the paragraph of a File Model state.</th>
  </tr>
  <tr>
-  <th>order</th><th>integer</th><th>The numerical order of the paragraph in a list of paragraphs in a text file.</th>
+  <th>wordCount</th><th>integer</th><th>wordCount of type integer is the amount of words of the paragraphText.</th>
  </tr>
  <tr>
-  <th>sentenceCount</th><th>integer</th><th>The amount of sentences in the paragraph.</th>
+  <th>sentenceCount</th><th>integer</th><th>sentenceCount of type integer is the amount of sentences of the paragraphText.</th>
  </tr>
  <tr>
-  <th>dialog</th><th>boolean</th><th>A boolean defining if dialog exists in the paragraph.</th>
+  <th>dialog</th><th>boolean</th><th>dialog of type boolean is of the paragraphText.</th>
  </tr>
  <tr>
-  <th>tense</th><th>list of strings</th><th>A list of tenses found in the paragraph.</th>
+  <th>tense</th><th>list of strings</th><th>tense of type list of strings is a list of tenses of the paragraphText.</th>
  </tr>
  <tr>
-  <th>sentenceStates</th><th>list of SentenceStates</th><th>A list of SentenceStates in the paragraph.</th>
+  <th>sentenceStates</th><th>list of SentenceStates</th><th>sentenceStates of type list of SentenceStates is a list of Sentence Model states of the Paragraph Model state.</th>
  </tr>
 </table>
 
 
-#### SentenceState
+#### Sentence Model
+
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>isCompleteSentence</th><th>boolean</th><th>A boolean to define if complete sentence.</th>
+  <th>sentenceText</th><th>boolean</th><th>sentenceText of type string is the text of the sentence.</th>
  </tr>
  <tr>
-  <th>sentence</th><th>string</th><th>The text of the sentence.</th>
+  <th>order</th><th>integer</th><th>order of type integer is the ordinal placement of the sentence of the Paragraph Model state.</th>
  </tr>
  <tr>
-  <th>wordCount</th><th>integer</th><th>The amount of words in the sentence.</th>
+  <th>wordCount</th><th>integer</th><th>wordCount of type integer is the amount of words of the sentenceText.</th>
  </tr>
  <tr>
-  <th>order</th><th>integer</th><th>The numerical order of the sentence in a paragraph.</th>
+  <th>tense</th><th>list of strings</th><th>tense of type list of strings is a list of tenses of the sentenceText.</th>
  </tr>
  <tr>
-  <th>tense</th><th>list of strings</th><th>A list of tenses found in the sentence.</th>
+  <th>nlpState</th><th>NlpState</th><th>nlpState of type NlpState is an Natural Language Processing Model state of the sentenceText.</tr>
  </tr>
  <tr>
-  <th>nlpState</th><th>NlpState</th><th>A state of the NLP output of the sentence.</tr>
+  <th>punctuationState</th><th>PunctuationState</th><th>punctuationState of type PunctuationState is a Punctuation Model state of the sentenceText.</tr>
  </tr>
  <tr>
-  <th>punctuationState</th><th>PunctuationState</th><th>A state containing the state of punctuation patterns found in the sentence.</tr>
+  <th>spellcheckState</th><th>SpellcheckState</th><th>spellcheckState of type SpellcheckState is a Spellcheck Model state of the sentenceText.</tr>
  </tr>
  <tr>
-  <th>spellcheckState</th><th>SpellcheckState</th><th>A state for non-dictionary words and their suggestions of possible words.</tr>
- </tr>
- <tr>
-  <th>dialogState</th><th>DialogState</th><th>A state defining the dialog state within the sentence.</tr>
+  <th>dialogState</th><th>DialogState</th><th>dialogState of type DialogState is a Dialog Model state of the sentenceText.</tr>
  </tr>
 </table>
 
@@ -154,21 +151,14 @@ Currently, only https://github.com/wordsum/wordsum-java outputs the Text Model.
 
 ### Story Model
 
-The Story Model depends upon the Text Model to model its states of CharacterState, NarratorState, SettingState and PlotState.
-
-As this model is more meta right now than Alpha,
-
-Currently, only CharacterState is being written. Once the builder to create CharacterState exist then then NarratorState and SettingState will also be nearly complete.
-
-PlotState is still a bit of mystery.
+The Story Model models the states: Narrative Model, Character Model, Narrator Model, Setting Model and Plot Model.
 
 
-
-#### NarrativeState
+#### Narrative Model
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
   <th>characterStates</th><th>An ordered list of CharacterStates.</th><th>An ordered list of states that defined the order or actions by a character during a narrative.</th>
@@ -184,11 +174,11 @@ PlotState is still a bit of mystery.
  </tr>
 </table>
 
-#### CharacterState
+#### Character Model
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
   <th>name</th><th>string</th><th>The given or predicted name of the character.</th>
@@ -198,33 +188,33 @@ PlotState is still a bit of mystery.
   </tr>
 </table>
 
-#### NarratorState
+#### Narrator Model
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
   <th>Defining...</th><th>Defining...</th><th>Defining...</th>
  </tr>
 </table>
 
-#### SettingState
+#### Setting Model
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
   <th>Defining...</th><th>Defining...</th><th>Defining...</th>
  </tr>
 </table>
 
-#### PlotState
+#### Plot Model
 
 <table>
  <tr>
-  <th>Component</th><th>Type</th><th>Purpose</th>
+  <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
   <th>Defining...</th><th>Defining...</th><th>Defining...</th>
