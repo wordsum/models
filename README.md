@@ -2,7 +2,7 @@
 
 wordsum is a model and a tool to create the model. 
 
-wordsum's goal is to model story and poetry for A.I..
+wordsum's goal is to model story and poetry for a machine to learn.
 .
 #### wordsum models
 <table>
@@ -27,11 +27,11 @@ wordsum's goal is to model story and poetry for A.I..
 
 The Text Model models three states: the File Model, the Paragraph Model and the Sentence Model.
 
-The File Model models text to model a story to teach A.I..
+The File Model models text to model a story to teach a machine.
 
-The Paragraph Model models text of a paragraph to model a story to teach A.I..
+The Paragraph Model models text of a paragraph to model a story to teach a machine.
 
-The Sentence Model models text of a sentence to model a story to teach A.I..
+The Sentence Model models text of a sentence to model a story to teach a machine.
 
 https://github.com/wordsum/wordsum-java outputs the Text Model.
 
