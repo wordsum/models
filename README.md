@@ -70,6 +70,9 @@ https://github.com/wordsum/wordsum-java outputs the Text Model.
   <tr>
    <th>creationTime</th><th>string</th><th>creationTime of type string is the creation time of thee File Model state.</th>
   </tr>
+    <tr>
+     <th>wordVectors</th><th>A string map of maps of plots</th><th>The word relation according to their coordinates in a dimensional grid.</th>
+    </tr>
  <tr>
   <th>paragraphStates</th><th>list of ParagraphStates</th><th>paragraphStates of type list of ParagraphStates is a list of Paragraph Model states of the File Model state</th>
  </tr>
@@ -217,8 +220,11 @@ The Story Model models the states: Narrative Model, Character Model, Narrator Mo
   <th>Feature</th><th>Type</th><th>Purpose</th>
  </tr>
  <tr>
-  <th>Defining...</th><th>Defining...</th><th>Defining...</th>
+  <th>fileStates</th><th>An ordered list of FileStates</th><th>The state of each file creating the story.</th>
  </tr>
+  <tr>
+   <th>wordVectors</th><th>A string map of maps of plots</th><th>The word relation according to their coordinates in a dimensional grid.</th>
+  </tr>
 </table>
 
 
